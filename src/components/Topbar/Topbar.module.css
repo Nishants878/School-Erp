@@ -1,0 +1,27 @@
+
+.FlexWrap{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.RightWrapper{
+    display: flex;
+    align-items: center;
+    
+}
+.Header>h1{
+    font-size: 2.6rem;
+}
+.RightWrapper>p{
+    margin-left: 2rem;
+    color: #A1A1A2;
+}
+.ImageWrapper{
+    width: 40px;
+    margin-left: 2rem;
+}
+.ImageWrapper>img{
+    width: 100%; 
+}

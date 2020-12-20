@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import classes from './app.module.css'
+
+import React from 'react'
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import SideBar from './components/SideBar/SideBar'
+import Classes from './containers/Classes/Classes'
+import ParticularClass from './containers/ParticularClass/ParticularClass'
+import Subjects from './containers/Subjects/Subjects'
+import Report from './containers/Report/Report'
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+         <div className={classes.App}>
+      <div className={classes.NavContent}>
+      <SideBar/> 
+      </div>
+      <div className={classes.AppMainContainer}>
+        <Switch>
+        <Route exact path = "/" component={Classes} />
+        <Route  path = "/particularclass" component={ParticularClass} />
+        <Route  path = "/subjects" component={Subjects} />
+        <Route  path = "/report" component={Report} />
+        </Switch>
+        
+      </div>
+       
     </div>
-  );
+    </BrowserRouter>
+  
+  )
 }
 
-export default App;

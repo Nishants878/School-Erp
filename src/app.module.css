@@ -1,0 +1,18 @@
+.App{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.NavContent{
+    width: 20%;
+    height: auto;
+}
+.AppMainContainer{
+    width: 80%;
+    margin-top: 0%;
+    margin-left: 9%;
+    margin-right: 5%;
+    padding: 1rem;
+    
+}

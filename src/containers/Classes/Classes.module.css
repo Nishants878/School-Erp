@@ -1,0 +1,7 @@
+.ClassCardContainer{
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow-y: hidden;
+}

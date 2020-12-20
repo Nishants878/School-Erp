@@ -1,0 +1,33 @@
+.ReportContainer{
+    margin-top: 3%;
+}
+/* student card styling */
+.StudentInfoCard{
+    display: flex;
+
+    width: 750px;
+    background-color: #1C1919;
+    padding: 1rem;
+    box-shadow: 0 0 4px #1C1919;
+    border-radius: 12px;
+}
+.TextWrapper{
+    display: flex;
+    padding-left: 1rem;
+}
+.TextWrapper>h3{
+    padding-left: 1rem;
+    width: 200px;
+}
+.ProfileImageWrapper{
+    width: 230px;
+}
+.ProfileImageWrapper>img{
+    width: 100%;
+}
+.ProfileContents{
+    color: #fff;
+    padding: .45rem;
+    margin-left:2rem;
+    border-left: 1px solid #ccc;
+}

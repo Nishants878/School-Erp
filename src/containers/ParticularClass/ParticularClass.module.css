@@ -1,0 +1,38 @@
+.StudentContainer{
+    margin-top: 3%;
+}
+.FlexWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SecondHeader{
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.Btn{
+    background-color: #1C1919;
+    color: #DBFFFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+}
+.StudentCardContainer{
+    margin-left: 12rem;
+}
+
+/* hidden modal  */
+.HiddenAlways{
+    width: 550px;
+    height: 450px;
+    border: 5px solid #000;
+    position: absolute;
+    z-index: 100;
+}
+.FlexWrapHidden{
+    display: flex;
+    align-items: center;
+}

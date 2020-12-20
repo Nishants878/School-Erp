@@ -1,0 +1,35 @@
+
+.Cards{
+    width: 280px;
+    padding: 5px;
+    position: relative;
+    min-height: 270px;
+    max-height: 300px;
+    margin-bottom: 10px;
+    border: none;
+    background: inherit;
+    margin-right: 10px;
+   
+}
+
+
+.CardThumbnail{
+        min-height: 180px;
+        
+}
+.ProgramLinks{
+    text-decoration: none;
+}
+
+.CardThumbnail > img{
+    height: 250px;
+    width: 100%;
+    position: relative;
+    margin: 0px 0 0 0;
+    border-radius: 25px;
+}
+
+
+
+
+
