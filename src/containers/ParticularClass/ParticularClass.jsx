@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
+import React  from 'react'
+// import { useForm } from 'react-hook-form'
 import classes from './ParticularClass.module.css'
 import Topbar from '../../components/Topbar/Topbar'
 import StudentCard from '../../components/StudentCard/StudentCard'
-import content from '../../static/index';
+// import content from '../../static/index';
 
 
 
@@ -11,15 +11,15 @@ export default function ParticularClass() {
 
    
   
-  const {register, handleSubmit} = useForm(
-    // {
-    //     resolver:yupResolver(schema),
-    // }
-);
+//   const {register, handleSubmit} = useForm(
+//     // {
+//     //     resolver:yupResolver(schema),
+//     // }
+// );
 
-const onSubmit =(data)=> console.log(data);
+// const onSubmit =(data)=> console.log(data);
 
-  const [showUploadTab, setShowUploadTab] = useState(false)
+  // const [showUploadTab, setShowUploadTab] = useState(false)
     return (
         <div className={classes.ParticularClassMainContainer}>
             <Topbar/>
