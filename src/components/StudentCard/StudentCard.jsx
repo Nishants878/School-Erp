@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import RotatingDropIcon from '../../Assests/image/chevron.svg';
 
 
-function StudentCard() {
+function StudentCard(props) {
+  console.log(props)
     
   
       const[isOpen, setIsOpen] = useState(false);
@@ -17,16 +18,16 @@ function StudentCard() {
           <div
           onClick ={() => setIsOpen(!isOpen)}
           className={classes.AccordionHeader}>
-           Student Name
+           {props.name}
           <img className={[isOpen ? classes.DropIcon:classes.DropRotate]} src={RotatingDropIcon} alt="DropDownIcon"/>
           </div>
           {<div className={isOpen ? classes.AccordionOpenBody : classes.AccordionBody}>
           <Link  to="/subjects"  className={classes.SessionIndicator}>
            Enter Marks
               </Link>
-          <Link to="/report" className={classes.SessionIndicator}>
+          <Link to={`/report/${props.id}`}  className={classes.SessionIndicator}>
             Report Card
-              </Link>
+              </Link>    
         </div>
         }
          

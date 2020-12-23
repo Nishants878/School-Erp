@@ -19,9 +19,9 @@ export default function App() {
       <div className={classes.AppMainContainer}>
         <Switch>
         <Route exact path = "/" component={Classes} />
-        <Route  path = "/particularclass" component={ParticularClass} />
+        <Route  path = "/particularclass/:classId" component={ParticularClass} />
         <Route  path = "/subjects" component={Subjects} />
-        <Route  path = "/report" component={Report} />
+        <Route  path = "/report/:studentId" render={(props)=> <Report id={props.id} key={props.id} name="Naman Ahuja" father={props.father}/>} />
         </Switch>
         
       </div>

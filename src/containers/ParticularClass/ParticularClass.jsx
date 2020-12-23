@@ -1,21 +1,35 @@
-import React  from 'react'
+import React, { useState, useEffect } from 'react'
 // import { useForm } from 'react-hook-form'
 import classes from './ParticularClass.module.css'
 import Topbar from '../../components/Topbar/Topbar'
 import StudentCard from '../../components/StudentCard/StudentCard'
+import Axios from 'axios';
 // import content from '../../static/index';
 
 
 
-export default function ParticularClass() {
+export default function ParticularClass(props) {
 
-   
+  const [studentCard, setStudentCard] = useState([]);
+  const classId = props.match.params.classId;
+  console.log(classId)
   
-//   const {register, handleSubmit} = useForm(
-//     // {
-//     //     resolver:yupResolver(schema),
-//     // }
-// );
+  useEffect(()=>{
+
+    //here we cant do async await in one function as it is not recommended by react so making another func for await
+    async function makeGetRequest(){
+      
+      
+        const request = await Axios.get(`https://5fe1862804f0780017de9d2e.mockapi.io/Students/`);
+        
+        const dero = request.data[0][classId]
+        console.log(dero)
+        setStudentCard(dero);
+        
+        return request
+    }
+        makeGetRequest()
+},[classId]);
 
 // const onSubmit =(data)=> console.log(data);
 
@@ -64,11 +78,10 @@ export default function ParticularClass() {
              {/* modal */}
                
               <div className={classes.StudentCardContainer}>
-                <StudentCard/>
-                <StudentCard/>
-                <StudentCard/>
-                <StudentCard/>
-                <StudentCard/>
+              {studentCard.map(items =>{
+                return <StudentCard id={items.id} key={items.id} name={items.name} father={items.father} />
+              })}
+                
               </div>
             </div>
         </div>

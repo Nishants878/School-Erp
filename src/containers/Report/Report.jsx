@@ -8,9 +8,9 @@ import Profile from '../../Assests/image/profile.jpg'
 
 
 
-export default function Report() {
+export default function Report(props) {
     
-
+console.log(props)
     
     
     
@@ -27,13 +27,13 @@ export default function Report() {
                     </div>
                     <div className={classes.ProfileContents}>
                        <div className={classes.TextWrapper}>
-                           <h3>Name :-</h3> <h3>Karan Sharma</h3>
+                           <h3>Name :-</h3> <h3>{props.name}</h3>
                        </div>
                        <div className={classes.TextWrapper}>
                            <h3>Class :-</h3> <h3>9</h3>
                        </div>
                        <div className={classes.TextWrapper}>
-                           <h3>Father's Name :-</h3> <h3>Sharan Sharma</h3>
+                           <h3>Father's Name :-</h3> <h3>{props.father}</h3>
                        </div>
                        <div className={classes.TextWrapper}>
                            <h3>Mother's Name :-</h3> <h3>Sheena Sharma</h3>
