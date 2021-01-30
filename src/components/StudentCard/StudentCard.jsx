@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import classes from './StudentCard.module.css'
 import { Link } from 'react-router-dom';
 import RotatingDropIcon from '../../Assests/image/chevron.svg';
-
+import EnterMarksCard from '../EnterMarksCard/EnterMarksCard'
 
 function StudentCard(props) {
   console.log(props)
@@ -22,9 +22,9 @@ function StudentCard(props) {
           <img className={[isOpen ? classes.DropIcon:classes.DropRotate]} src={RotatingDropIcon} alt="DropDownIcon"/>
           </div>
           {<div className={isOpen ? classes.AccordionOpenBody : classes.AccordionBody}>
-          <Link  to="/subjects"  className={classes.SessionIndicator}>
-           Enter Marks
-              </Link>
+          <div  to="/subjects"  className={classes.SessionIndicator}>
+           <EnterMarksCard/>
+              </div>
           <Link to={`/report/${props.id}`}  className={classes.SessionIndicator}>
             Report Card
               </Link>    
