@@ -3,62 +3,31 @@ import React from 'react'
 import classes from './Report.module.css'
 import Topbar from '../../components/Topbar/Topbar'
 import Profile from '../../Assests/image/profile.jpg'
+import { Link } from 'react-router-dom';
 
-
-
+import ReportCard from '../../components/ReportCard/ReportCard'
 
 
 export default function Report(props) {
-    
-console.log(props)
+    console.log(props.location.name)
+
     
     
     
 
     return (
-        <div className={classes.SubjectsMainContainer}>
+        <div  className={classes.SubjectsMainContainer}>
           <Topbar/>
           <div className={classes.ReportContainer}>
-               {/* student info card */}
-               <h2>Student Report</h2>
-                <div className={classes.StudentInfoCard}>
-                    <div className={classes.ProfileImageWrapper}>
-                    <img src={Profile} alt="Profile"/>
-                    </div>
-                    <div className={classes.ProfileContents}>
-                       <div className={classes.TextWrapper}>
-                           <h3>Name :-</h3> <h3>{props.name}</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Class :-</h3> <h3>9</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Father's Name :-</h3> <h3>{props.father}</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Mother's Name :-</h3> <h3>Sheena Sharma</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Subject Wise Result</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Maths :-</h3> <h3>80</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>English :-</h3> <h3>90</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Hindi :-</h3> <h3>75</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Science :-</h3> <h3>90</h3>
-                       </div>
-                       <div className={classes.TextWrapper}>
-                           <h3>Social Studies :-</h3> <h3>75</h3>
-                       </div>
-                    </div>
-                </div>
-                {/* student info card */}
+           <ReportCard id={props.location.id} key={props.location.id} name={props.location.name} father={props.location.father} 
+           mother={props.location.mother} 
+           maths={props.location.maths} 
+           english={props.location.english}
+           hindi={props.location.hindi} 
+           science={props.location.science} 
+           social={props.location.social}
+           class={props.location.class}
+           />
                 
           </div>
         </div>

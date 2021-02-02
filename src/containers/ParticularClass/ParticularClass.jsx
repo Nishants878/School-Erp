@@ -23,6 +23,7 @@ export default function ParticularClass(props) {
         const request = await Axios.get(`https://5fe1862804f0780017de9d2e.mockapi.io/Students/`);
         
         const dero = request.data[0][classId]
+        
         console.log(dero)
         setStudentCard(dero);
         
@@ -79,7 +80,7 @@ export default function ParticularClass(props) {
                
               <div className={classes.StudentCardContainer}>
               {studentCard.map(items =>{
-                return <StudentCard id={items.id} key={items.id} name={items.name} father={items.father} />
+                return <StudentCard id={items.id} key={items.id} name={items.name} father={items.father} mother={items.mother} maths={items.maths} english={items.english} hindi={items.hindi} science={items.science} social={items.social} class={items.class}/>
               })}
                 
               </div>
